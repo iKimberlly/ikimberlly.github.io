@@ -1,23 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Kimberlly Silva | Portfólio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-weight: 400;
+            color: #555;
+        }
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        .stack span {
+            display: inline-block;
+            background: #e3eaf3;
+            padding: 8px 14px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            margin: 10px;
+            display: inline-block;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #0077b5;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #005f8d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
 </head>
-<body style="font-family: Arial; text-align: center; margin-top: 100px;">
+
+<body>
+
+<header>
     <h1>Kimberlly Silva</h1>
     <h2>Desenvolvedora focada em Inteligência Artificial</h2>
+    <p>Machine Learning • RAG • LangChain • Guardrails • Automação com IA</p>
+</header>
 
-    <p>
-        Atuo com Machine Learning, LangChain, RAG, Guardrails e automações com IA.
-    </p>
+<section>
+    <h2>Projetos</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>RAG com LangChain</h3>
+            <p>Implementação de Retrieval-Augmented Generation com embeddings e integração de APIs.</p>
+        </div>
 
-    <h3>Projetos</h3>
-    <p>🔹 Implementação de RAG com LangChain</p>
-    <p>🔹 Validação com Regex e Guardrails</p>
-    <p>🔹 Automação com n8n + IA</p>
+        <div class="card">
+            <h3>Validação com Guardrails</h3>
+            <p>Uso de Regex e validação estruturada para controle de respostas de LLMs.</p>
+        </div>
 
-    <h3>Contato</h3>
-    <p>LinkedIn: (coloque seu link aqui)</p>
+        <div class="card">
+            <h3>Automação com n8n + IA</h3>
+            <p>Fluxos automatizados integrando APIs, modelos de linguagem e validações.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Stack Tecnológica</h2>
+    <div class="stack">
+        <span>Python</span>
+        <span>Machine Learning</span>
+        <span>LangChain</span>
+        <span>RAG</span>
+        <span>Embeddings</span>
+        <span>Guardrails</span>
+        <span>n8n</span>
+        <span>APIs</span>
+    </div>
+</section>
+
+<section class="buttons">
+    <a href="https://www.linkedin.com/in/SEU-LINK-AQUI" class="btn btn-primary" target="_blank">LinkedIn</a>
+</section>
+
+<footer>
+    © 2026 Kimberlly Silva — Portfólio Profissional
+</footer>
+
 </body>
 </html>
