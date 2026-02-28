@@ -2,185 +2,51 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kimberlly Silva | IA Aplicada</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f5f7fa;
-    color: #2d2d2d;
-}
-
-header {
-    text-align: center;
-    padding: 80px 20px 50px;
-    background: white;
-}
-
-h1 {
-    margin-bottom: 10px;
-    font-size: 36px;
-}
-
-h2 {
-    margin-top: 0;
-    font-weight: 400;
-    color: #555;
-}
-
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 60px 20px;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-}
-
-.stack span {
-    display: inline-block;
-    background: #e4ecf7;
-    padding: 8px 14px;
-    margin: 6px;
-    border-radius: 20px;
-    font-size: 14px;
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    font-size: 14px;
-    background: white;
-    color: #777;
-}
-
-.btn {
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    background: #0077b5;
-    color: white;
-    display: inline-block;
-    margin-top: 20px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<nav>
+<div><strong>Kimberlly Silva</strong></div>
+<div>
+<a href="index.html">Home</a>
+<a href="projetos.html">Projetos</a>
+<a href="#">Sobre</a>
+<a href="#">Contato</a>
+</div>
+</nav>
+
 <header>
-<h1>Kimberlly Silva</h1>
-<h2>Desenvolvedora de Inteligência Artificial Aplicada</h2>
-<p>RAG • Embeddings • Validação de LLM • Automação • Computer Vision</p>
-<a href="https://www.linkedin.com/in/SEU-LINK-AQUI" class="btn" target="_blank">LinkedIn</a>
+<h1>Desenvolvedora de Inteligência Artificial Aplicada</h1>
+<p>RAG • Guardrails • FAISS • Computer Vision • Integrações</p>
 </header>
 
-<section>
-<h2>Sobre Mim</h2>
-<p>
-Desenvolvedora com foco em Inteligência Artificial aplicada a problemas reais. 
-Atuo na construção de sistemas baseados em RAG (Retrieval-Augmented Generation), 
-validação estruturada de modelos de linguagem com Guardrails e Regex, 
-indexação vetorial com FAISS e automações integradas a APIs.
-</p>
-<p>
-Busco desenvolver soluções robustas, seguras e escaláveis que conectem IA 
-a aplicações práticas, como sistemas jurídicos, controle de estoque e 
-segurança do trabalho.
-</p>
-</section>
-
-<section>
-<h2>Projetos</h2>
+<section class="section">
+<h2>Projetos em Destaque</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>RAG Jurídico + FAISS</h3>
-<p>
-Sistema de recuperação semântica para consultas jurídicas utilizando embeddings
-e indexação vetorial com FAISS.
-</p>
-<p><strong>Tecnologias:</strong> Python, SentenceTransformers, FAISS, RAG</p>
+<p>Sistema de recuperação semântica com embeddings vetoriais.</p>
+<a href="projeto-rag.html" class="button">Ver Projeto</a>
 </div>
 
 <div class="card">
-<h3>Validação de LLM com Guardrails + Regex</h3>
-<p>
-Desenvolvimento de SDK para controle e validação estruturada de respostas
-de modelos de linguagem, garantindo consistência e segurança.
-</p>
-<p><strong>Tecnologias:</strong> Python, Regex, Engenharia de Prompt</p>
+<h3>Guardrails + Regex SDK</h3>
+<p>Validação estruturada de respostas de LLM.</p>
+<a href="projeto-guardrails.html" class="button">Ver Projeto</a>
 </div>
 
 <div class="card">
-<h3>ServiceQR - Sistema de Estoque</h3>
-<p>
-Ferramenta de gestão de estoque com integração via QR Code para controle
-e rastreamento de produtos.
-</p>
-<p><strong>Tecnologias:</strong> Backend, Integração QR Code</p>
-</div>
-
-<div class="card">
-<h3>Classificação de Objetos (Capacete)</h3>
-<p>
-Modelo de visão computacional para detecção de capacetes de segurança
-em ambientes de trabalho.
-</p>
-<p><strong>Tecnologias:</strong> Python, Computer Vision, Métricas de Avaliação</p>
-</div>
-
-<div class="card">
-<h3>Site de Livros com IA + RAG</h3>
-<p>
-Sistema inteligente para recomendação e busca contextualizada de livros
-utilizando recuperação aumentada por geração.
-</p>
-<p><strong>Tecnologias:</strong> RAG, Embeddings, APIs</p>
+<h3>Classificação de Capacete</h3>
+<p>Visão computacional aplicada à segurança do trabalho.</p>
+<a href="projeto-cv.html" class="button">Ver Projeto</a>
 </div>
 
 </div>
 </section>
-
-<section>
-<h2>Stack Tecnológica</h2>
-<div class="stack">
-<span>Python</span>
-<span>Machine Learning</span>
-<span>LangChain</span>
-<span>RAG</span>
-<span>FAISS</span>
-<span>Embeddings</span>
-<span>Guardrails</span>
-<span>Regex</span>
-<span>Computer Vision</span>
-<span>n8n</span>
-<span>APIs</span>
-</div>
-</section>
-
-<footer>
-© 2026 Kimberlly Silva — Inteligência Artificial Aplicada
-</footer>
 
 </body>
 </html>
