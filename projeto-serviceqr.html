@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiceQR - Kimberlly Silva</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">KIMBERLLY<span>.DEV</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#projects">← Voltar aos Projetos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="paper-container">
+        <header class="paper-header">
+            <span class="badge">Sistemas de Gestão & Automação</span>
+            <h1>ServiceQR: Digitalização e Rastreabilidade de Manutenção Técnica via QR Code</h1>
+            <p class="paper-authors">Desenvolvido por Kimberlly Silva • 2026</p>
+            
+            <div class="paper-abstract">
+                <strong>Resumo:</strong> O ServiceQR é um sistema web responsivo projetado para a gestão de serviços técnicos e controle de manutenção. A solução integra o registro de ativos (máquinas) à geração automática de identificadores únicos (QR Codes), permitindo a rastreabilidade total do histórico de intervenções e o controle financeiro em tempo real para assistências técnicas e pequenas empresas.
+            </div>
+        </header>
+
+        <hr class="paper-divider">
+
+        <article class="paper-body">
+            
+            <section>
+                <h2>1. Introdução e Objetivo</h2>
+                <p>O sistema foi desenvolvido para otimizar o fluxo de trabalho de prestadores de serviços, eliminando registros manuais e falhas de comunicação. O foco principal é a centralização de dados críticos: cadastro de clientes, inventário de máquinas, controle de serviços realizados e saúde financeira da operação.</p>
+                <div class="target-audience">
+                    <strong>Público-Alvo:</strong> Assistências técnicas, técnicos autônomos, oficinas especializadas e gestão de manutenção industrial.
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Arquitetura e Stack Tecnológica</h2>
+                <p>A aplicação utiliza uma arquitetura MVC simplificada, priorizando a leveza e a facilidade de deploy em ambientes locais ou nuvem:</p>
+                <div class="tools-grid">
+                    <div class="tool-card"><strong>Backend:</strong> Python 3 com Framework Flask para rotas e lógica de negócio.</div>
+                    <div class="tool-card"><strong>Banco de Dados:</strong> SQLite3 para persistência de dados estruturada.</div>
+                    <div class="tool-card"><strong>Frontend:</strong> HTML5, CSS3, Bootstrap e visualização de dados com Chart.js.</div>
+                    <div class="tool-card"><strong>Segurança:</strong> Criptografia de senhas com Werkzeug e controle de sessão.</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Funcionalidades Principais</h2>
+                
+                <h3>3.1 Gestão de Máquinas e Rastreabilidade</h3>
+                <p>Cada equipamento cadastrado recebe um <strong>QR Code exclusivo</strong>. Ao escanear o código, o técnico acessa instantaneamente a "Ficha da Máquina", contendo marca, modelo, número de série e, crucialmente, a <strong>linha do tempo de serviços</strong> anteriores.</p>
+
+                <h3>3.2 Controle Financeiro e Relatórios</h3>
+                <p>O sistema automatiza a separação de valores pagos e pendentes. Através da integração com <strong>Chart.js</strong>, o gestor visualiza o faturamento semanal e mensal, permitindo uma tomada de decisão baseada em dados reais de produtividade.</p>
+            
+
+                <a href="projeto-serviceqr.html" class="project-card-link">
+
+                <div class="figure-slider">
+
+                    <div class="slides">
+
+                        <div class="slide active">
+                            <img src="img/servqr/login.png" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img src="img/servqr/home.png" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img src="img/servqr/dadosmaquina.png" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img src="img/servqr/dadosmaquina2.png" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img src="img/servqr/menulateral.png" alt="">
+                        </div>
+
+                        <div class="slide">
+                            <img src="img/servqr/relatorio.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="slider-btn prev">❮</button>
+                    <button type="button" class="slider-btn next">❯</button>
+
+                    <div class="slider-indicators">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+                </div>
+
+                <p class="figure-caption">
+                <strong>Figura 1:</strong> Telas reais do ServiceQR incluindo dashboard,
+                login, gestão de máquinas, menu lateral e relatórios financeiros.
+                </p>
+            </section>
+
+            <section>
+                <h2>4. Estrutura do Projeto</h2>
+                <div class="code-structure">
+                    <pre class="code-structure">
+                        ServiceQR/
+                        ├── app.py
+                        ├── serviceqr.db
+                        ├── requirements.txt
+                        ├── database/
+                        │   └── schema.sql
+                        ├── static/
+                        │   ├── css/style.css
+                        │   ├── icons/
+                        │   ├── uploads/
+                        │   ├── qrcodes/
+                        │   ├── qrscan.js
+                        │   ├── sw.js
+                        │   └── manifest.json
+                        ├── templates/
+                        │   ├── base.html
+                        │   ├── home.html
+                        │   ├── login.html
+                        │   ├── maquina_detalhe.html
+                        │   ├── scan_qr.html
+                        │   ├── clientes_lista.html
+                        │   ├── admin_editar_cliente.html
+                        │   ├── tecnico_form.html
+                        │   ├── tecnicos_lista.html
+                        │   ├── servico_form.html
+                        │   └── relatorio.html
+                        </pre>
+                </div>
+            </section>
+
+            <section>
+                <h2>5. Diferenciais e Status</h2>
+                <div class="status-grid">
+                    <div class="status-item">✔ QR Code por máquina</div>
+                    <div class="status-item">✔ Integração WhatsApp</div>
+                    <div class="status-item">✔ Relatórios Gerenciais</div>
+                    <div class="status-item">✔ Design Responsivo</div>
+                </div>
+                <p style="margin-top: 20px;"><strong>Status Atual:</strong> 🟢 Sistema funcional e pronto para deploy escalável em modelo SaaS.</p>
+            </section>
+
+        </article>
+    </main>
+
+        <script>
+
+        document.addEventListener("DOMContentLoaded", function(){
+
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+        let autoplay;
+
+        function showSlide(i){
+
+        slides.forEach((slide, n)=>{
+        slide.classList.remove("active");
+        dots[n].classList.remove("active");
+        });
+
+        slides[i].classList.add("active");
+        dots[i].classList.add("active");
+
+        index = i;
+
+        }
+
+        function nextSlide(){
+
+        let i = (index + 1) % slides.length;
+        showSlide(i);
+
+        }
+
+        function prevSlide(){
+
+        let i = (index - 1 + slides.length) % slides.length;
+        showSlide(i);
+
+        }
+
+       dots.forEach((dot, i)=>{
+            dot.addEventListener("click", function(e){
+                e.preventDefault();
+                showSlide(i);
+            });
+        });
+
+        dots.forEach((dot, i)=>{
+        dot.addEventListener("click", ()=> showSlide(i));
+        });
+
+        function startAuto(){
+        autoplay = setInterval(nextSlide, 3000);
+        }
+
+        function stopAuto(){
+        clearInterval(autoplay);
+        }
+
+        const slider = document.querySelector(".figure-slider");
+
+        slider.addEventListener("mouseenter", stopAuto);
+        slider.addEventListener("mouseleave", startAuto);
+
+        startAuto();
+
+        });
+
+        </script>
+
+</body>
+</html>

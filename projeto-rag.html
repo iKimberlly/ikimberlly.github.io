@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Jurídico - Kimberlly Silva</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">KIMBERLLY<span>.DEV</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#projects">← Voltar aos Projetos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="paper-container">
+        <header class="paper-header">
+            <span class="badge">NLP & Generative AI</span>
+            <h1>Arquitetura RAG para Recuperação de Jurisprudência e Análise de Documentos Jurídicos</h1>
+            <p class="paper-authors">Por Kimberlly Silva • 2025</p>
+            
+            <div class="paper-abstract">
+                <strong>Resumo:</strong> Este projeto descreve a implementação de um sistema de <em>Retrieval-Augmented Generation</em> (RAG) especializado no domínio jurídico. Utilizando embeddings vetoriais e LLMs, o sistema permite consultas em linguagem natural sobre extensas bases de dados de processos, mitigando alucinações e garantindo respostas baseadas estritamente em evidências documentais.
+            </div>
+        </header>
+
+        <hr class="paper-divider">
+
+        <article class="paper-body">
+            <section>
+                <h2>1. O Problema da Recuperação Jurídica</h2>
+                <p>A análise manual de jurisprudência é morosa e sujeita a erros. Sistemas de busca por palavra-chave falham em captar o <strong>contexto semântico</strong> de teses jurídicas. Este projeto utiliza IA para permitir que advogados façam perguntas complexas e recebam respostas fundamentadas com citações diretas da base de dados.</p>
+            </section>
+
+            <section>
+                <h2>2. Stack Tecnológica</h2>
+                <div class="tools-grid">
+                    <div class="tool-card"><strong>LangChain:</strong> Framework de orquestração para cadeias de prompts e memória.</div>
+                    <div class="tool-card"><strong>FAISS:</strong> Biblioteca do Facebook para busca eficiente de similaridade em vetores densos.</div>
+                    <div class="tool-card"><strong>OpenAI / Anthropic:</strong> Modelos de linguagem para síntese e raciocínio lógico.</div>
+                    <div class="tool-card"><strong>Sentence Transformers:</strong> Geradores de embeddings para representação vetorial do texto.</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Fluxo de Processamento (Pipeline)</h2>
+                <p>O pipeline foi estruturado para garantir a integridade da informação:</p>
+                <ul style="margin-bottom: 20px; padding-left: 20px;">
+                    <li><strong>Ingestão:</strong> PDF/Text parsing com limpeza de caracteres especiais jurídicos.</li>
+                    <li><strong>Chunking:</strong> Divisão recursiva de texto para manter a coesão de parágrafos e artigos de lei.</li>
+                    <li><strong>Vetoriação:</strong> Transformação do conhecimento em coordenadas matemáticas (espaço vetorial).</li>
+                    <li><strong>Retrieval:</strong> Busca das <em>top-k</em> passagens mais relevantes para a dúvida do usuário.</li>
+                </ul>
+            </section>
+
+            <section>
+            <h2>4. Resultados e Performance do Sistema</h2>
+            <p>
+                A eficácia da arquitetura foi validada através da análise de recuperação semântica sobre acórdãos do TCU. O sistema demonstrou uma capacidade superior de identificar passagens relevantes, mantendo a fidelidade documental e reduzindo o tempo de triagem de processos complexos.
+            </p>
+
+            <div class="figure-box">
+                <img src="img/RAGjuri/interface.png" alt="Interface do RAG Jurídico — Consulta Semântica no TCU" style="max-width: 800px;">
+                <p class="figure-caption"><strong>Figura 1:</strong> Interface funcional do sistema demonstrando uma consulta sobre penalidades para gestores públicos com referências diretas à Lei 8.666/1993.</p>
+            </div>
+
+            <div class="paper-media-grid">
+                <div class="figure-box">
+                    <img src="img/RAGjuri/resulta1.png" alt="Distribuição ordenada do tamanho dos chunks">
+                    <p class="figure-caption"><strong>Figura 2:</strong> Análise da distribuição de chunks (palavras) para garantir que o contexto jurídico não seja fragmentado.</p>
+                </div>
+                <div class="figure-box">
+                    <img src="img/RAGjuri/resulta2.png" alt="Distribuição das distâncias FAISS">
+                    <p class="figure-caption"><strong>Figura 3:</strong> Scores de distância vetorial (FAISS) indicando a precisão na similaridade entre a pergunta e os trechos retornados.</p>
+                </div>
+            </div>
+
+            <div class="metrics-focus">
+                <div class="metric-item">
+                    <span class="metric-value">Hit@1: 1.0</span>
+                    <span class="metric-label">Precisão de Recuperação</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">70%</span>
+                    <span class="metric-label">Ganho de Eficiência</span>
+                </div>
+            </div>
+        </section>
+        </article>
+
+        <footer class="paper-actions">
+            <a href="https://colab.research.google.com/drive/1ObcjjyAN-PDtmuZX7SGafLCryqCOxLvN" target="_blank" class="skill-pill">
+               📄 Ver Código Fonte no Google Colab
+            </a>
+        </footer
+    </main>
+
+</body>
+</html>

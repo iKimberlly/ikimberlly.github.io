@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detecção de EPI - Kimberlly Silva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-detail-page">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">KIMBERLLY<span>.DEV</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#projects">← Voltar aos Projetos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="paper-container">
+    <header class="paper-header">
+        <span class="badge">Technical Report: Computer Vision</span>
+        <h1>Implementação de Redes Neurais Convolucionais para Fiscalização Automática de EPI em Canteiros de Obra</h1>
+        <p class="paper-authors">Por Kimberlly Silva • 2025</p>
+        
+        <div class="paper-abstract">
+            <strong>Resumo:</strong> Este projeto apresenta o desenvolvimento de um sistema de visão computacional baseado no algoritmo YOLOv8 para a detecção em tempo real de Equipamentos de Proteção Individual (Capacetes). O objetivo é reduzir o tempo de resposta em fiscalizações de segurança do trabalho e mitigar riscos de acidentes fatais.
+        </div>
+    </header>
+
+    <hr class="paper-divider">
+
+    <article class="paper-body">
+        
+        <section>
+            <h2>1. Introdução e Contextualização</h2>
+            <p>A negligência no uso de EPIs é uma das principais causas de acidentes em ambientes industriais. A monitorização manual é falha e custosa. Este estudo propõe uma solução automatizada que utiliza inteligência artificial para identificar conformidades e inconformidades de forma instantânea.</p>
+        </section>
+
+        <section>
+            <h2>2. Metodologia e Ferramentas</h2>
+            <p>O desenvolvimento foi estruturado em três fases principais: coleta de dados, treinamento supervisionado e validação em ambiente real. As ferramentas selecionadas garantem alta performance computacional:</p>
+            <div class="tools-grid">
+                <div class="tool-card"><strong>YOLOv8:</strong> Arquitetura de rede neural para detecção de objetos em única passagem.</div>
+                <div class="tool-card"><strong>PyTorch:</strong> Framework principal para otimização de tensores e pesos do modelo.</div>
+                <div class="tool-card"><strong>OpenCV:</strong> Manipulação de frames de vídeo e processamento de imagem em tempo real.</div>
+                <div class="tool-card"><strong>Python:</strong> Linguagem base para integração de scripts e automação.</div>
+            </div>
+        </section>
+
+        <section class="paper-media">
+            <div class="figure-box">
+                <img src="img/EPI/result 4.jpg" alt="Visualização do Modelo" style="max-width: 100%;" >
+                <p class="figure-caption"><strong>Figura 1:</strong> Saída do modelo com bounding boxes indicando precisão entre 0.85 e 0.89.</p>
+            </div>
+        </section>
+
+        <section>
+        <h2>3. Análise de Resultados e Performance</h2>
+        <p>
+            A avaliação do modelo foi conduzida utilizando métricas padrão de detecção de objetos (COCO metrics). O treinamento, realizado em ambiente <strong>Google Colab com GPU T4</strong>, processou um dataset robusto de <strong>18.966 instâncias</strong>, garantindo uma generalização eficaz para diferentes condições de iluminação e oclusões parciais em ambientes de obra.
+        </p>
+        
+        <div class="metrics-focus">
+            <div class="metric-item">
+                <span class="metric-value">89.2%</span>
+                <span class="metric-label">mAP @.50</span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-value">0.86</span>
+                <span class="metric-label">F1-Score</span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-value">0.003s</span>
+                <span class="metric-label">Inference Time</span>
+            </div>
+        </div>
+
+        <p>
+            <strong>Principais Conclusões:</strong>
+        </p>
+        <ul style="margin-bottom: 20px; padding-left: 20px;">
+            <li><strong>Precisão Local:</strong> O modelo demonstrou alta confiabilidade na distinção entre capacetes e outros objetos de formato similar (falso-positivo reduzido).</li>
+            <li><strong>Velocidade de Processamento:</strong> A arquitetura YOLOv8 permitiu uma inferência de apenas 3ms por frame, viabilizando o monitoramento de múltiplas câmeras simultâneas em tempo real.</li>
+            <li><strong>Convergência:</strong> A estabilização das curvas de perda (Loss) após a 50ª época indicou um treinamento saudável, sem sinais de <em>overfitting</em>.</li>
+        </ul>
+
+        <div class="figure-box">
+            <img src="img/EPI/metrica confusao.jpg" alt="Matriz de Confusão do Modelo">
+            <p class="figure-caption"><strong>Figura 2:</strong> Matriz de Confusão evidenciando a alta taxa de acerto para a classe alvo (Helmet).</p>
+        </div>
+    </section>
+
+        <section>
+        <h2>4. Demonstração em Vídeo</h2>
+        <div class="video-container-scientific">
+            <video controls width="100%" poster="img/EPI/result 1.jpg" preload="metadata">
+                <source src="img/EPI/Dia do Técnico de Segurança do Trabalho 2023 - Dimensional QSMS-I (720p, h264, youtube).mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos. 
+                <a href="img/EPI/demonstracao-epi.mp4">Clique aqui para baixar o vídeo.</a>
+            </video>
+        </div>
+    </section>
+
+    </article>
+
+    <footer class="paper-actions">
+        <a href="https://github.com/iKimberlly/helmet-detection-yolov8" target="_blank" class="skill-pill">
+           📄 Acessar código fonte (Github)
+        </a>
+    </footer>
+</main>
+</body>
+</html>
